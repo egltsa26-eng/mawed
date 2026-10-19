@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="intro">
+  <h1>مواعيدك في السعودية، كم باقي عليها بالضبط</h1>
+  <p class="lead">الراتب وحساب المواطن والضمان والتقاعد ورمضان والعيد، محسوبة بتوقيت الرياض ومأخوذة من الجهات الرسمية. وتحتها حاسبات تحتاجها في الشغل والدراسة.</p>
+</div>
+
+<div class="hero">
+  <a class="pad" data-leaf-link href="{{ site.link(home.first.slug) }}" style="text-decoration:none">
+    <div class="leaf" data-leaf>
+      <div class="leaf-top"><span data-l-month>{{ home.first.gmonth }}</span><span data-l-hmonth>{{ home.first.hmonth }}</span></div>
+      <div class="leaf-body">
+        <span class="leaf-kicker" data-l-kicker>{{ home.first.name }} بعد</span>
+        <span class="leaf-num" data-l-num>{{ home.first.left }}</span>
+        <span class="leaf-unit" data-l-unit>{{ home.first.unit }}</span>
+      </div>
+      <div class="leaf-foot">
+        <span class="g" data-l-g>{{ home.first.weekday }} {{ home.first.gtext }}</span>
+        <span class="h" data-l-h>{{ home.first.htext }}</span>
+      </div>
+    </div>
+  </a>
+
+  <section id="dates" aria-labelledby="dates-title">
+    <div class="section-head">
+      <h2 id="dates-title">المواعيد القادمة</h2>
+      <p class="muted small">مرتبة من الأقرب. اضغط على أي موعد تشوف تاريخه بالهجري والميلادي وجدول السنة كاملة.</p>
+    </div>
+    <ul class="upcoming" data-upcoming>
+      {% for it in home.rows %}<li><a href="{{ site.link(it.slug) }}"><span class="mini" aria-hidden="true"><span class="m">{{ it.gmonth_short }}</span><span class="d">{{ it.day }}</span></span><span><span class="u-name">{{ it.name }}</span><span class="u-when">{{ it.weekday }} {{ it.gtext }} · {{ it.htext }}</span></span><span class="u-left"><b>{{ it.left }}</b><span>{{ it.unit }}</span></span></a></li>
+      {% endfor %}
+    </ul>
+  </section>
+</div>
+
+{{ site.ad('top') | safe }}
+
+<div class="home-grid">
+  <section id="tools" aria-labelledby="tools-title">
+    <div class="section-head">
+      <h2 id="tools-title">الحاسبات</h2>
+      <p class="muted small">تحسب على جهازك، وما نحفظ أي رقم تدخله.</p>
+    </div>
+    <ul class="tools">
+      {% for t in home.tools %}<li><a href="{{ site.link(t.slug) }}"><span class="t">{{ t.name }}</span><span class="d">{{ t.desc }}</span></a></li>
+      {% endfor %}
+    </ul>
+  </section>
+  <section aria-labelledby="how-title">
+    <div class="section-head">
+      <h2 id="how-title">كيف نحسب المواعيد؟</h2>
+    </div>
+    <div class="prose">
+      <p>كل موعد له قاعدة رسمية، مثل أن رواتب الحكومة تُصرف يوم 27 من كل شهر ميلادي. إذا صادف اليوم إجازة نهاية الأسبوع نطبق ما تعلنه الجهة، ونوضح ذلك في جدول كل موعد.</p>
+      <p>التاريخ الهجري عندنا حسب تقويم أم القرى، وهو التقويم المعتمد في المملكة. أما بداية رمضان والأعياد فتُعلن رسميًا بعد رؤية الهلال، لذلك قد تختلف بيوم عن التقويم.</p>
+      <p>نراجع المواعيد كل شهر مقابل مصادرها. <a href="{{ site.link('about') }}">اقرأ أكثر عن طريقتنا</a>.</p>
+    </div>
+  </section>
+</div>
+<script type="application/json" id="mawed-upcoming">{{ home.data_json | safe }}</script>
+{% endblock %}

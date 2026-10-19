@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<nav class="crumbs" aria-label="مسار الصفحة"><a href="{{ site.link('index') }}">الرئيسية</a><span aria-hidden="true">›</span><span>{{ p.crumb }}</span></nav>
+<article class="prose">
+  <h1>{{ p.h1 }}</h1>
+  {% for block in p.body %}{{ block | safe }}
+  {% endfor %}
+</article>
+{% endblock %}

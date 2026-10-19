@@ -1,0 +1,65 @@
+{% if not site.fragment %}<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+{% endif %}<title>{{ page.title }}</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="{{ page.description }}">
+{% if site.production %}<link rel="canonical" href="{{ site.origin }}{{ page.path }}">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ar_SA">
+<meta property="og:site_name" content="موعد">
+<meta property="og:title" content="{{ page.og_title or page.title }}">
+<meta property="og:description" content="{{ page.description }}">
+<meta property="og:url" content="{{ site.origin }}{{ page.path }}">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="{{ site.asset('fonts/readex-pro-arabic-700-normal.woff2') }}" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="{{ site.asset('fonts.css') }}">
+{% else %}<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;600&family=Readex+Pro:wght@400;500;600;700&display=swap">
+{% endif %}<meta name="theme-color" content="#C8102E">
+{% if site.inline_css %}<style>{{ site.css | safe }}</style>
+{% else %}<link rel="stylesheet" href="{{ site.asset('site.css') }}">
+{% endif %}{% if page.jsonld %}<script type="application/ld+json">{{ page.jsonld | safe }}</script>
+{% endif %}{% if site.production and site.adsense_client %}<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ site.adsense_client }}" crossorigin="anonymous"></script>
+{% endif %}{% if not site.fragment %}</head>
+<body>
+{% else %}<script>document.documentElement.setAttribute('dir','rtl');document.documentElement.setAttribute('lang','ar');</script>
+{% endif %}<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="{{ site.link('index') }}" aria-label="موعد، الصفحة الرئيسية">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="3" y="5" width="26" height="24" rx="5" fill="var(--leaf)" stroke="var(--rule)"/><path d="M3 10a5 5 0 0 1 5-5h16a5 5 0 0 1 5 5v2H3z" fill="var(--red)"/><circle cx="11" cy="8.5" r="1.4" fill="var(--paper)"/><circle cx="21" cy="8.5" r="1.4" fill="var(--paper)"/><text x="16" y="25" text-anchor="middle" font-family="Readex Pro, Tahoma, sans-serif" font-weight="700" font-size="11" fill="var(--ink)">27</text></svg>
+      موعد
+    </a>
+    <nav class="nav" aria-label="أقسام الموقع">
+      <a href="{{ site.link('index') }}#dates"{% if page.section == 'dates' %} aria-current="page"{% endif %}>المواعيد</a>
+      <a href="{{ site.link('index') }}#tools"{% if page.section == 'tools' %} aria-current="page"{% endif %}>الحاسبات</a>
+      <a href="{{ site.link('about') }}"{% if page.section == 'about' %} aria-current="page"{% endif %}>عن موعد</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <div class="wrap">
+{% block content %}{% endblock %}
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <p data-today>&nbsp;</p>
+    <nav class="foot-links" aria-label="روابط الموقع">
+      <a href="{{ site.link('about') }}">عن موعد</a>
+      <a href="{{ site.link('contact') }}">تواصل معنا</a>
+      <a href="{{ site.link('privacy') }}">سياسة الخصوصية</a>
+      <a href="{{ site.link('terms') }}">الشروط وإخلاء المسؤولية</a>
+    </nav>
+    <p>المعلومات هنا للاسترشاد، والمرجع النهائي هو الجهة الرسمية. آخر مراجعة للمواعيد: {{ site.reviewed }}.</p>
+  </div>
+</footer>
+<script>window.MAWED_UQ = {{ site.uq_json | safe }};</script>
+{% if site.inline_js %}<script>{{ site.js | safe }}</script>
+{% else %}<script src="{{ site.asset('site.js') }}"></script>
+{% endif %}{% block scripts %}{% endblock %}
+{% if not site.fragment %}</body>
+</html>
+{% endif %}

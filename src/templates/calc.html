@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block content %}
+<nav class="crumbs" aria-label="مسار الصفحة"><a href="{{ site.link('index') }}">الرئيسية</a><span aria-hidden="true">›</span><a href="{{ site.link('index') }}#tools">الحاسبات</a><span aria-hidden="true">›</span><span>{{ p.crumb }}</span></nav>
+
+<div class="intro">
+  <h1>{{ p.h1 }}</h1>
+  <p class="lead">{{ p.lead }}</p>
+</div>
+
+<div class="calc" data-calc="{{ p.calc }}">
+  <form class="form" novalidate onsubmit="return false">
+    {{ p.form | safe }}
+  </form>
+  <div class="result" aria-live="polite">
+    <div class="result-head">{{ p.result_title }}</div>
+    <div class="result-body">
+      {{ p.result | safe }}
+    </div>
+  </div>
+</div>
+
+{{ site.ad('top') | safe }}
+
+<section class="prose">
+  {% for block in p.body %}{{ block | safe }}
+  {% endfor %}
+  {% if p.sources %}<p class="source">المصادر: {% for s in p.sources %}<a href="{{ s.url }}" rel="noopener" target="_blank">{{ s.name }}</a>{% if not loop.last %}، {% endif %}{% endfor %}</p>{% endif %}
+</section>
+
+{{ site.ad('mid') | safe }}
+
+{% if p.faq %}<section>
+  <h2 class="section-title">أسئلة متكررة</h2>
+  <div class="faq">
+    {% for q in p.faq %}<details><summary>{{ q[0] }}</summary><div>{{ q[1] | safe }}</div></details>
+    {% endfor %}
+  </div>
+</section>{% endif %}
+
+<section>
+  <h2 class="section-title">حاسبات ومواعيد أخرى</h2>
+  <div class="related">{% for r in p.related %}<a href="{{ site.link(r[0]) }}">{{ r[1] }}</a>{% endfor %}</div>
+</section>
+{% endblock %}
+{% block scripts %}<script>{{ p.script | safe }}</script>{% endblock %}

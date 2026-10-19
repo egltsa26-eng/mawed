@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% block content %}
+<nav class="crumbs" aria-label="مسار الصفحة"><a href="{{ site.link('index') }}">الرئيسية</a><span aria-hidden="true">›</span><a href="{{ site.link('index') }}#dates">المواعيد</a><span aria-hidden="true">›</span><span>{{ p.crumb }}</span></nav>
+
+<div class="intro">
+  <h1>{{ p.h1 }}</h1>
+  <p class="lead" data-answer="{{ p.answer_tpl }}">{{ p.answer_static }}</p>
+</div>
+
+<div class="hero">
+  <div class="leaf-col">
+    <div class="pad">
+      <div class="leaf" data-leaf>
+        <div class="leaf-top"><span data-l-month>{{ p.next.gmonth }}</span><span data-l-hmonth>{{ p.next.hmonth }}</span></div>
+        <div class="leaf-body">
+          <span class="leaf-kicker" data-l-kicker>{{ p.kicker or 'باقي' }}</span>
+          <span class="leaf-num" data-l-num>{{ p.next.left }}</span>
+          <span class="leaf-unit" data-l-unit>{{ p.next.unit }}</span>
+        </div>
+        <div class="leaf-foot">
+          <time class="g" data-l-g datetime="{{ p.next.iso }}">{{ p.next.weekday }} {{ p.next.gtext }}</time>
+          <span class="h" data-l-h>{{ p.next.htext }}</span>
+        </div>
+      </div>
+    </div>
+    <div class="timer-box" data-timer hidden>
+      <div class="timer">
+        <div><b data-t-d>0</b><span>يوم</span></div>
+        <div><b data-t-h>0</b><span>ساعة</span></div>
+        <div><b data-t-m>0</b><span>دقيقة</span></div>
+        <div><b data-t-s>0</b><span>ثانية</span></div>
+      </div>
+      <p class="timer-cap">الوقت بالضبط حتى أول دقيقة من يوم الموعد بتوقيت الرياض</p>
+    </div>
+  </div>
+
+  <div class="stack">
+    <dl class="facts">
+      {% for f in p.facts %}<div><dt>{{ f[0] }}</dt><dd>{{ f[1] }}</dd></div>
+      {% endfor %}
+    </dl>
+    {% if p.note %}<p class="note">{{ p.note }}</p>{% endif %}
+    <p class="source">المصدر: {% for s in p.sources %}<a href="{{ s.url }}" rel="noopener" target="_blank">{{ s.name }}</a>{% if not loop.last %}، {% endif %}{% endfor %}</p>
+  </div>
+</div>
+
+{{ site.ad('top') | safe }}
+
+<section>
+  <h2 class="section-title">{{ p.table_title }}</h2>
+  <div class="table-scroll">
+    <table class="dates">
+      <thead><tr>{% for h in p.table_head[:3] %}<th scope="col">{{ h }}</th>{% endfor %}{% if p.has_notes %}<th scope="col">{{ p.table_head[3] }}</th>{% endif %}</tr></thead>
+      <tbody>
+      {% for r in p.rows %}<tr data-date="{{ r.iso }}"><td>{{ r.label }}</td><td><time datetime="{{ r.iso }}">{{ r.weekday }} {{ r.gtext }}</time></td><td>{{ r.htext }}</td>{% if p.has_notes %}<td>{% if r.moved %}<span class="chip moved">{{ r.moved }}</span>{% elif r.note %}{{ r.note }}{% endif %}</td>{% endif %}</tr>
+      {% endfor %}</tbody>
+    </table>
+  </div>
+  {% if p.table_note %}<p class="source" style="margin-top:.6rem">{{ p.table_note }}</p>{% endif %}
+</section>
+
+<section class="prose">
+  {% for block in p.body %}{{ block | safe }}
+  {% endfor %}
+</section>
+
+{{ site.ad('mid') | safe }}
+
+{% if p.faq %}<section>
+  <h2 class="section-title">أسئلة متكررة</h2>
+  <div class="faq">
+    {% for q in p.faq %}<details><summary>{{ q[0] }}</summary><div>{{ q[1] | safe }}</div></details>
+    {% endfor %}
+  </div>
+</section>{% endif %}
+
+<section>
+  <h2 class="section-title">مواعيد قريبة منك</h2>
+  <div class="related">{% for r in p.related %}<a href="{{ site.link(r[0]) }}">{{ r[1] }}</a>{% endfor %}</div>
+</section>
+<script type="application/json" id="mawed-data">{{ p.data_json | safe }}</script>
+{% endblock %}
