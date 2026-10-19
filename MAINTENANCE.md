@@ -9,7 +9,7 @@ Site: https://egltsa26-eng.github.io/mawed/ is built from this repo. Every push 
 | `src/payments.py` | Rules for government salaries (27th), Citizen Account (10th), Developed Social Security (1st), GOSI pensions (1st). `OVERRIDES` = announced dates that differ from a rule. `PENDING` = the rule date falls in a holiday and no announcement exists yet. |
 | `src/occasions.py` | Eid holiday rules, Founding Day and National Day text, the school calendar (`SCHOOL_BREAKS`). |
 | `src/programs.py` | Ramadan and Eid pages (Umm al-Qura dates come from `hijri-converter`). |
-| `src/content.py` | `REVIEWED_TEXT` (shown in the footer) and `ADSENSE_CLIENT`. |
+| `src/content.py` | `REVIEWED_TEXT` (shown in the footer), `ADSENSE_CLIENT`, and `SEARCH_CONSOLE_FILES` (Google ownership file; never remove it). |
 
 ## Each run
 

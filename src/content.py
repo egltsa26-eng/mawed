@@ -13,6 +13,8 @@ import calcs  # noqa: E402
 
 REVIEWED_TEXT = "أكتوبر 2026"
 ADSENSE_CLIENT = None  # set to "ca-pub-..." once AdSense approves the site
+# Google Search Console ownership files (must stay published for the property to remain verified)
+SEARCH_CONSOLE_FILES = ["google9aff746155b8450e.html"]
 
 GM = ['يناير', 'فبراير', 'مارس', 'أبريل', 'مايو', 'يونيو', 'يوليو', 'أغسطس', 'سبتمبر', 'أكتوبر', 'نوفمبر', 'ديسمبر']
 HM = ['محرم', 'صفر', 'ربيع الأول', 'ربيع الآخر', 'جمادى الأولى', 'جمادى الآخرة', 'رجب', 'شعبان', 'رمضان', 'شوال', 'ذو القعدة', 'ذو الحجة']
@@ -138,6 +140,8 @@ def static_files(origin, pages):
             "/assets/*\n  Cache-Control: public, max-age=604800\n\n"
             "/assets/fonts/*\n  Cache-Control: public, max-age=31536000, immutable\n"),
     }
+    for name in SEARCH_CONSOLE_FILES:
+        files[name] = f"google-site-verification: {name}"
     if ADSENSE_CLIENT:
         files["ads.txt"] = f"google.com, {ADSENSE_CLIENT.replace('ca-', '')}, DIRECT, f08c47fec0942fa0\n"
     return files
