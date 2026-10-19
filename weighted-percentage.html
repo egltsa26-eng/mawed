@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>حاسبة النسبة الموزونة للقبول الجامعي</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="احسب نسبتك الموزونة للقبول في الجامعات السعودية من درجة الثانوي والقدرات والتحصيلي، مع أشهر الأوزان أو أوزانك الخاصة.">
+<link rel="canonical" href="https://egltsa26-eng.github.io/mawed/weighted-percentage">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ar_SA">
+<meta property="og:site_name" content="موعد">
+<meta property="og:title" content="حاسبة النسبة الموزونة للقبول الجامعي">
+<meta property="og:description" content="احسب نسبتك الموزونة للقبول في الجامعات السعودية من درجة الثانوي والقدرات والتحصيلي، مع أشهر الأوزان أو أوزانك الخاصة.">
+<meta property="og:url" content="https://egltsa26-eng.github.io/mawed/weighted-percentage">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="/mawed/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/mawed/assets/fonts/readex-pro-arabic-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/mawed/assets/fonts.css">
+<meta name="theme-color" content="#C8102E">
+<link rel="stylesheet" href="/mawed/assets/site.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "حاسبة النسبة الموزونة", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "inLanguage": "ar-SA", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "SAR"}}</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/mawed/" aria-label="موعد، الصفحة الرئيسية">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="3" y="5" width="26" height="24" rx="5" fill="var(--leaf)" stroke="var(--rule)"/><path d="M3 10a5 5 0 0 1 5-5h16a5 5 0 0 1 5 5v2H3z" fill="var(--red)"/><circle cx="11" cy="8.5" r="1.4" fill="var(--paper)"/><circle cx="21" cy="8.5" r="1.4" fill="var(--paper)"/><text x="16" y="25" text-anchor="middle" font-family="Readex Pro, Tahoma, sans-serif" font-weight="700" font-size="11" fill="var(--ink)">27</text></svg>
+      موعد
+    </a>
+    <nav class="nav" aria-label="أقسام الموقع">
+      <a href="/mawed/#dates">المواعيد</a>
+      <a href="/mawed/#tools" aria-current="page">الحاسبات</a>
+      <a href="/mawed/about">عن موعد</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <div class="wrap">
+
+<nav class="crumbs" aria-label="مسار الصفحة"><a href="/mawed/">الرئيسية</a><span aria-hidden="true">›</span><a href="/mawed/#tools">الحاسبات</a><span aria-hidden="true">›</span><span>حاسبة النسبة الموزونة</span></nav>
+
+<div class="intro">
+  <h1>حاسبة النسبة الموزونة</h1>
+  <p class="lead">اكتب نسبة الثانوي ودرجة القدرات والتحصيلي، واختر الأوزان التي تعلنها الجامعة لتخصصك.</p>
+</div>
+
+<div class="calc" data-calc="weighted">
+  <form class="form" novalidate onsubmit="return false">
+    <div class="row2"><div class="field"><label for="w-gpa">نسبة الثانوي</label><input id="w-gpa" type="text" inputmode="decimal" dir="ltr" value="95"></div><div class="field"><label for="w-q">القدرات العامة</label><input id="w-q" type="text" inputmode="decimal" dir="ltr" value="80"></div><div class="field"><label for="w-t">التحصيلي</label><input id="w-t" type="text" inputmode="decimal" dir="ltr" value="78"></div><div class="field" data-step hidden><label for="w-s">اختبار STEP</label><input id="w-s" type="text" inputmode="decimal" dir="ltr" value="70"></div></div><div class="field"><label for="w-preset">الأوزان</label><select id="w-preset"><option value="30-30-40-0">جامعة الملك سعود 1448: ثانوي 30%، قدرات 30%، تحصيلي 40%</option><option value="30-30-30-10">جامعة الملك عبدالعزيز 1448: ثانوي 30%، قدرات 30%، تحصيلي 30%، STEP 10%</option><option value="30-30-40-0">جامعة الإمام (دليل 1447): ثانوي 30%، قدرات 30%، تحصيلي 40%</option><option value="custom">أوزان أخرى أكتبها بنفسي</option></select><span class="hint">تأكد من الأوزان في دليل القبول لجامعتك، فقد تختلف حسب البرنامج.</span></div><div class="row2" data-custom hidden><div class="field"><label for="w-wg">وزن الثانوي %</label><input id="w-wg" type="text" inputmode="decimal" dir="ltr" value="30"></div><div class="field"><label for="w-wq">وزن القدرات %</label><input id="w-wq" type="text" inputmode="decimal" dir="ltr" value="30"></div><div class="field"><label for="w-wt">وزن التحصيلي %</label><input id="w-wt" type="text" inputmode="decimal" dir="ltr" value="40"></div><div class="field"><label for="w-ws">وزن STEP %</label><input id="w-ws" type="text" inputmode="decimal" dir="ltr" value="0"></div></div>
+  </form>
+  <div class="result" aria-live="polite">
+    <div class="result-head">نسبتك الموزونة</div>
+    <div class="result-body">
+      <p class="muted">جاري الحساب…</p>
+    </div>
+  </div>
+</div>
+
+
+
+<section class="prose">
+  <h2>كيف تُحسب النسبة الموزونة؟</h2>
+  <p>تضرب كل درجة في وزنها ثم تجمع النواتج. مثلًا بأوزان 30% و30% و40%: ثانوي 95 × 0.30 = 28.5، وقدرات 80 × 0.30 = 24، وتحصيلي 78 × 0.40 = 31.2. فالنسبة الموزونة 83.70%.</p>
+  <h2>أوزان الجامعات للعام 1448</h2>
+  <p>جامعة الملك سعود تعتمد في دليل القبول للعام الجامعي 2026/2027: 30% للثانوي و30% للقدرات و40% للتحصيلي لكل المسارات، وتشترط للبرامج المتميزة نسبة موزونة لا تقل عن 95% للطب و90% لغيره. وأضافت جامعة الملك عبدالعزيز هذا العام اختبار STEP بوزن 10%، مع 30% لكل من الثانوي والقدرات والتحصيلي.</p>
+  <p>كل جامعة تعلن أوزانها في دليل القبول، وقد تختلف حسب البرنامج أو تتغير من سنة لأخرى. إذا كانت جامعتك غير موجودة في القائمة فاختر الأوزان الخاصة واكتب ما في دليلها.</p>
+  
+  <p class="source">المصادر: <a href="https://dar.ksu.edu.sa/sites/dar.ksu.edu.sa/files/2026-06/admgar_1.pdf" rel="noopener" target="_blank">جامعة الملك سعود: دليل القبول 2026/2027</a>، <a href="https://kau.edu.sa/u/15Qfc" rel="noopener" target="_blank">جامعة الملك عبدالعزيز: دليل القبول</a>، <a href="https://www.al-madina.com/ampArticle/961787" rel="noopener" target="_blank">المدينة: إضافة STEP لمعايير القبول</a>، <a href="https://units.imamu.edu.sa/colleges/en/science/College_ad/Vice_Den/ViceDeanships/guides/Documents/admission%20Undergraduate%20_1447.pdf" rel="noopener" target="_blank">جامعة الإمام: دليل القبول 1447</a></p>
+</section>
+
+
+
+<section>
+  <h2 class="section-title">أسئلة متكررة</h2>
+  <div class="faq">
+    <details><summary>هل التحصيلي مطلوب لكل التخصصات؟</summary><div>في جامعة الملك سعود يدخل التحصيلي في كل المسارات للعام 1448. جامعات وبرامج أخرى قد تختلف، فراجع دليل جامعتك واستخدم الأوزان الخاصة.</div></details>
+    <details><summary>ما الفرق بين النسبة الموزونة والمعدل؟</summary><div>المعدل هو نسبة الثانوي فقط، أما الموزونة فتجمع الثانوي والاختبارات بأوزان تحددها الجامعة.</div></details>
+    
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">حاسبات ومواعيد أخرى</h2>
+  <div class="related"><a href="/mawed/age">حساب العمر</a><a href="/mawed/date-converter">تحويل التاريخ</a></div>
+</section>
+
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <p data-today>&nbsp;</p>
+    <nav class="foot-links" aria-label="روابط الموقع">
+      <a href="/mawed/about">عن موعد</a>
+      <a href="/mawed/contact">تواصل معنا</a>
+      <a href="/mawed/privacy">سياسة الخصوصية</a>
+      <a href="/mawed/terms">الشروط وإخلاء المسؤولية</a>
+    </nav>
+    <p>المعلومات هنا للاسترشاد، والمرجع النهائي هو الجهة الرسمية. آخر مراجعة للمواعيد: أكتوبر 2026.</p>
+  </div>
+</footer>
+<script>window.MAWED_UQ = {"firstMJD": 23998, "firstYear": 1343, "lens": "090090008000990909090909090919080090990090099009990090090099090909009918090909000810909099090090090909990090090909090909090090900990909090090909090909090090990909009909090909090900009099099009000909909909090909090900090909090909090909090909090909090900090909080009090909090900090909090909090909090909090909090900090909009009090909090909090990909000909090990900909090909090090909009900090909099009909900090909099090900900090909090909909090909090090909090909090090990909090090099090909009090909090909090909090099090009009909090900990909090900900909090909090909090900090909009099090909090900990909090900090999090900090909099009090090990909090009099090909009090909090909009090909090909009009099090900909090990909000909099090900090909909900900090990990090090909090909090090909090909090090909099090090090909909090009090990909009009099099009000909909900900900990990900090909099090090090909099090090900909099090900090909909090090090909909000090990999000090099099900090090909909090090090990909090090900909909090090090990909009009099099000900909909900900900990909090900909090990900090909099090090090909909090090099090909090090909090909090090099090990090009909909090009090990909000909099090900900909909090900909090909090900909009909090900090990990900090099099090009090909909009009090990909009009090990909009009099090909000909909090900099090909900090909090990090900909099090900090909909900900090990990090009099099009009090909900909009090909090909090090909909009009090990909000909099099000090909909090090090990909090090909090990090090099099009090009909909009009090909909009090090990909009009099090909000909909909000900990990900900099099090090090909909090090900990909090900900909909090090090990990090009099099009009009909900909000990909090900909090990900900909099090900090909909090090090990909090090900990909090090099090990090009909909090009090990909000909099090900900990909090900909090909090909009009909909000"};</script>
+<script src="/mawed/assets/site.js"></script>
+<script>window.MawedPage = function (M) {
+  var root = document.querySelector('[data-calc="weighted"]');
+  var form = root.querySelector('form');
+  var out = root.querySelector('.result-body');
+  var $ = function (id) { return form.querySelector('#' + id); };
+  var preset = $('w-preset');
+  var custom = form.querySelector('[data-custom]');
+  var stepField = form.querySelector('[data-step]');
+  var NAMES = ['الثانوي', 'القدرات', 'التحصيلي', 'STEP'];
+
+  function val(el) { var v = parseFloat(String(el.value).replace(/,/g, '')); return isFinite(v) ? v : NaN; }
+  function weights() {
+    if (preset.value === 'custom') return [$('w-wg'), $('w-wq'), $('w-wt'), $('w-ws')].map(function (el) { var x = val(el); return isFinite(x) ? x : 0; });
+    return preset.value.split('-').map(Number);
+  }
+  function row(k, v) { return '<li><span>' + k + '</span><b>' + v + '</b></li>'; }
+  function calc() {
+    custom.hidden = preset.value !== 'custom';
+    var w = weights();
+    stepField.hidden = !(w[3] > 0);
+    var scores = [val($('w-gpa')), val($('w-q')), val($('w-t')), val($('w-s'))];
+    var sum = w[0] + w[1] + w[2] + w[3];
+    for (var i = 0; i < 4; i++) {
+      if (w[i] > 0 && !isFinite(scores[i])) { out.innerHTML = '<p class="muted">اكتب درجة ' + NAMES[i] + ' من 100.</p>'; return; }
+      if (w[i] > 0 && (scores[i] < 0 || scores[i] > 100)) { out.innerHTML = '<p class="warn">درجة ' + NAMES[i] + ' لازم تكون بين 0 و100.</p>'; return; }
+    }
+    if (Math.abs(sum - 100) > 0.001) { out.innerHTML = '<p class="warn">مجموع الأوزان ' + sum + '%، ولازم يكون 100%.</p>'; return; }
+    var total = 0, lines = '';
+    for (var j = 0; j < 4; j++) {
+      if (!(w[j] > 0)) continue;
+      var part = scores[j] * w[j] / 100;
+      total += part;
+      lines += row(NAMES[j] + ' × ' + w[j] + '%', part.toFixed(2));
+    }
+    out.innerHTML = '<div class="result-big">' + total.toFixed(2) + '<small>%</small></div><ul class="breakdown">' + lines + '</ul>';
+  }
+  form.addEventListener('input', calc);
+  form.addEventListener('change', calc);
+  calc();
+};
+</script>
+</body>
+</html>

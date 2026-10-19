@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>حساب العمر بالهجري والميلادي بدقة</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="احسب عمرك بالسنوات والأشهر والأيام بالهجري والميلادي، واعرف يوم ميلادك وتاريخه المقابل حسب تقويم أم القرى.">
+<link rel="canonical" href="https://egltsa26-eng.github.io/mawed/age">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ar_SA">
+<meta property="og:site_name" content="موعد">
+<meta property="og:title" content="حساب العمر بالهجري والميلادي بدقة">
+<meta property="og:description" content="احسب عمرك بالسنوات والأشهر والأيام بالهجري والميلادي، واعرف يوم ميلادك وتاريخه المقابل حسب تقويم أم القرى.">
+<meta property="og:url" content="https://egltsa26-eng.github.io/mawed/age">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="/mawed/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/mawed/assets/fonts/readex-pro-arabic-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/mawed/assets/fonts.css">
+<meta name="theme-color" content="#C8102E">
+<link rel="stylesheet" href="/mawed/assets/site.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "حساب العمر بالهجري والميلادي", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "inLanguage": "ar-SA", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "SAR"}}</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/mawed/" aria-label="موعد، الصفحة الرئيسية">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="3" y="5" width="26" height="24" rx="5" fill="var(--leaf)" stroke="var(--rule)"/><path d="M3 10a5 5 0 0 1 5-5h16a5 5 0 0 1 5 5v2H3z" fill="var(--red)"/><circle cx="11" cy="8.5" r="1.4" fill="var(--paper)"/><circle cx="21" cy="8.5" r="1.4" fill="var(--paper)"/><text x="16" y="25" text-anchor="middle" font-family="Readex Pro, Tahoma, sans-serif" font-weight="700" font-size="11" fill="var(--ink)">27</text></svg>
+      موعد
+    </a>
+    <nav class="nav" aria-label="أقسام الموقع">
+      <a href="/mawed/#dates">المواعيد</a>
+      <a href="/mawed/#tools" aria-current="page">الحاسبات</a>
+      <a href="/mawed/about">عن موعد</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <div class="wrap">
+
+<nav class="crumbs" aria-label="مسار الصفحة"><a href="/mawed/">الرئيسية</a><span aria-hidden="true">›</span><a href="/mawed/#tools">الحاسبات</a><span aria-hidden="true">›</span><span>حساب العمر</span></nav>
+
+<div class="intro">
+  <h1>حساب العمر بالهجري والميلادي</h1>
+  <p class="lead">اكتب تاريخ ميلادك بالهجري أو بالميلادي، ونطلع لك عمرك بالتقويمين، ويوم ميلادك، وكم باقي على عيد ميلادك.</p>
+</div>
+
+<div class="calc" data-calc="age">
+  <form class="form" novalidate onsubmit="return false">
+    <div class="field"><label for="age-cal">تقويم تاريخ الميلاد</label><select id="age-cal"><option value="g">ميلادي</option><option value="h">هجري</option></select></div><div class="row2"><div class="field"><label for="age-d">اليوم</label><input id="age-d" type="number" inputmode="numeric" min="1" max="31" value="15"></div><div class="field"><label for="age-m">الشهر</label><select id="age-m"></select></div><div class="field"><label for="age-y">سنة الميلاد</label><input id="age-y" type="number" inputmode="numeric" value="1995"><span class="hint" id="age-y-hint"></span></div></div>
+  </form>
+  <div class="result" aria-live="polite">
+    <div class="result-head">عمرك اليوم</div>
+    <div class="result-body">
+      <p class="muted">جاري الحساب…</p>
+    </div>
+  </div>
+</div>
+
+
+
+<section class="prose">
+  <h2>كيف نحسب العمر؟</h2>
+  <p>نطرح تاريخ ميلادك من تاريخ اليوم بتوقيت الرياض، ونحسب السنوات ثم الأشهر ثم الأيام. في العمر الهجري نستخدم أطوال الأشهر الحقيقية في تقويم أم القرى، فبعض الأشهر 29 يومًا وبعضها 30.</p>
+  <h2>ليش عمري بالهجري أكبر؟</h2>
+  <p>السنة الهجرية نحو 354 يومًا، أي أقصر من الميلادية بنحو 11 يومًا. لذلك يزيد عمرك بالهجري سنة تقريبًا كل 33 سنة ميلادية.</p>
+  
+  <p class="source">المصادر: <a href="https://saudipedia.com/%D8%AA%D9%82%D9%88%D9%8A%D9%85-%D8%A3%D9%85-%D8%A7%D9%84%D9%82%D8%B1%D9%89" rel="noopener" target="_blank">سعوديبيديا: تقويم أم القرى</a></p>
+</section>
+
+
+
+<section>
+  <h2 class="section-title">أسئلة متكررة</h2>
+  <div class="faq">
+    <details><summary>هل يعتمد الحساب على تقويم أم القرى؟</summary><div>نعم، وهو التقويم المعتمد في المملكة، ويغطي المدى من 1343 إلى 1500 هـ.</div></details>
+    <details><summary>من مواليد 29 فبراير، متى عيد ميلادي؟</summary><div>في السنوات غير الكبيسة نعتبره 28 فبراير.</div></details>
+    
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">حاسبات ومواعيد أخرى</h2>
+  <div class="related"><a href="/mawed/date-converter">تحويل التاريخ</a><a href="/mawed/ramadan">كم باقي على رمضان</a><a href="/mawed/end-of-service">حاسبة نهاية الخدمة</a></div>
+</section>
+
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <p data-today>&nbsp;</p>
+    <nav class="foot-links" aria-label="روابط الموقع">
+      <a href="/mawed/about">عن موعد</a>
+      <a href="/mawed/contact">تواصل معنا</a>
+      <a href="/mawed/privacy">سياسة الخصوصية</a>
+      <a href="/mawed/terms">الشروط وإخلاء المسؤولية</a>
+    </nav>
+    <p>المعلومات هنا للاسترشاد، والمرجع النهائي هو الجهة الرسمية. آخر مراجعة للمواعيد: أكتوبر 2026.</p>
+  </div>
+</footer>
+<script>window.MAWED_UQ = {"firstMJD": 23998, "firstYear": 1343, "lens": "090090008000990909090909090919080090990090099009990090090099090909009918090909000810909099090090090909990090090909090909090090900990909090090909090909090090990909009909090909090900009099099009000909909909090909090900090909090909090909090909090909090900090909080009090909090900090909090909090909090909090909090900090909009009090909090909090990909000909090990900909090909090090909009900090909099009909900090909099090900900090909090909909090909090090909090909090090990909090090099090909009090909090909090909090099090009009909090900990909090900900909090909090909090900090909009099090909090900990909090900090999090900090909099009090090990909090009099090909009090909090909009090909090909009009099090900909090990909000909099090900090909909900900090990990090090909090909090090909090909090090909099090090090909909090009090990909009009099099009000909909900900900990990900090909099090090090909099090090900909099090900090909909090090090909909000090990999000090099099900090090909909090090090990909090090900909909090090090990909009009099099000900909909900900900990909090900909090990900090909099090090090909909090090099090909090090909090909090090099090990090009909909090009090990909000909099090900900909909090900909090909090900909009909090900090990990900090099099090009090909909009009090990909009009090990909009009099090909000909909090900099090909900090909090990090900909099090900090909909900900090990990090009099099009009090909900909009090909090909090090909909009009090990909000909099099000090909909090090090990909090090909090990090090099099009090009909909009009090909909009090090990909009009099090909000909909909000900990990900900099099090090090909909090090900990909090900900909909090090090990990090009099099009009009909900909000990909090900909090990900900909099090900090909909090090090990909090090900990909090090099090990090009909909090009090990909000909099090900900990909090900909090909090909009009909909000"};</script>
+<script src="/mawed/assets/site.js"></script>
+<script>window.MawedPage = function (M) {
+  var form = document.querySelector('[data-calc="age"] form');
+  var out = document.querySelector('[data-calc="age"] .result-body');
+  var cal = form.querySelector('#age-cal');
+  var d = form.querySelector('#age-d'), m = form.querySelector('#age-m'), y = form.querySelector('#age-y');
+
+  function fillMonths() {
+    var names = cal.value === 'h' ? M.HM : M.GM;
+    var keep = m.value;
+    m.innerHTML = '';
+    names.forEach(function (n, i) { var o = document.createElement('option'); o.value = i + 1; o.textContent = (i + 1) + ' - ' + n; m.appendChild(o); });
+    m.value = keep || '1';
+  }
+  function gDiff(a, b) { // a <= b, Gregorian [y,m,d]
+    var yy = b[0] - a[0], mm = b[1] - a[1], dd = b[2] - a[2];
+    if (dd < 0) { mm -= 1; dd += new Date(Date.UTC(b[0], b[1] - 1, 0)).getUTCDate(); }
+    if (mm < 0) { yy -= 1; mm += 12; }
+    return [yy, mm, dd];
+  }
+  function hDiff(a, b) { // Hijri [y,m,d]
+    var yy = b[0] - a[0], mm = b[1] - a[1], dd = b[2] - a[2];
+    if (dd < 0) {
+      mm -= 1;
+      var pm = b[1] - 1, py = b[0]; if (pm < 1) { pm = 12; py -= 1; }
+      dd += M.hMonthLen(py, pm) || 30;
+    }
+    if (mm < 0) { yy -= 1; mm += 12; }
+    return [yy, mm, dd];
+  }
+  function part(n, one, two, few, many) {
+    if (n === 0) return '';
+    if (n === 1) return one;
+    if (n === 2) return two;
+    if (n >= 3 && n <= 10) return n + ' ' + few;
+    return n + ' ' + many;
+  }
+  function span(t) {
+    var s = [part(t[0], 'سنة', 'سنتان', 'سنوات', 'سنة'), part(t[1], 'شهر', 'شهران', 'أشهر', 'شهرًا'), part(t[2], 'يوم', 'يومان', 'أيام', 'يومًا')].filter(Boolean);
+    return s.length ? s.join(' و') : 'أقل من يوم';
+  }
+  function row(k, v) { return '<li><span>' + k + '</span><b>' + v + '</b></li>'; }
+
+  function calc() {
+    var dd = parseInt(d.value, 10), mm = parseInt(m.value, 10), yy = parseInt(y.value, 10);
+    var today = M.todayRiyadh();
+    var g, h;
+    if (!dd || !mm || !yy) { out.innerHTML = '<p class="muted">اكتب تاريخ ميلادك كامل: اليوم والشهر والسنة.</p>'; return; }
+    if (cal.value === 'h') {
+      g = M.fromHijri(yy, mm, dd);
+      if (!g) { out.innerHTML = '<p class="warn">هذا التاريخ غير موجود في تقويم أم القرى. تأكد من اليوم (بعض الأشهر 29 يومًا) ومن السنة بين 1343 و1500.</p>'; return; }
+      h = [yy, mm, dd];
+    } else {
+      var t = new Date(Date.UTC(yy, mm - 1, dd));
+      if (t.getUTCMonth() !== mm - 1 || t.getUTCDate() !== dd || yy < 1925) { out.innerHTML = '<p class="warn">تأكد من التاريخ الميلادي: اليوم غير موجود في هذا الشهر، أو السنة قبل 1925.</p>'; return; }
+      g = [yy, mm, dd];
+      h = M.toHijri(yy, mm, dd);
+    }
+    var gn = M.mjd(g[0], g[1], g[2]), tn = M.mjd(today[0], today[1], today[2]);
+    if (gn > tn) { out.innerHTML = '<p class="warn">التاريخ في المستقبل. اكتب تاريخ ميلاد قبل اليوم.</p>'; return; }
+    var th = M.toHijri(today[0], today[1], today[2]);
+    var ga = gDiff(g, today), ha = h && th ? hDiff(h, th) : null;
+    // next Gregorian birthday
+    var ny = today[0], nb;
+    for (;;) {
+      var bd = g[2];
+      var last = new Date(Date.UTC(ny, g[1], 0)).getUTCDate();
+      if (bd > last) bd = last; // 29 Feb -> 28 Feb in common years
+      nb = [ny, g[1], bd];
+      if (M.mjd(nb[0], nb[1], nb[2]) >= tn) break;
+      ny++;
+    }
+    var left = M.mjd(nb[0], nb[1], nb[2]) - tn;
+    // next Hijri birthday (a 30th falls back to the 29th in a 29-day month)
+    var hLeft = null, hNext = null;
+    if (h && th) {
+      for (var hy = th[0]; hy <= th[0] + 1 && hLeft === null; hy++) {
+        var len = M.hMonthLen(hy, h[1]);
+        if (!len) break;
+        var gd = M.fromHijri(hy, h[1], Math.min(h[2], len));
+        var n2 = M.mjd(gd[0], gd[1], gd[2]);
+        if (n2 >= tn) { hLeft = n2 - tn; hNext = gd; }
+      }
+    }
+    out.innerHTML =
+      '<div class="result-big">' + ga[0] + '<small>سنة ميلادية</small></div>' +
+      '<p>' + span(ga) + '</p>' +
+      '<ul class="breakdown">' +
+      (ha ? row('عمرك بالهجري', span(ha)) : '') +
+      row('تاريخ الميلاد بالميلادي', M.weekday(g) + ' ' + M.gText(g)) +
+      (h ? row('تاريخ الميلاد بالهجري', M.hText(h)) : '') +
+      row('عدد الأيام اللي عشتها', (tn - gn).toLocaleString('en-US') + ' يوم') +
+      row('عيد ميلادك الميلادي القادم', left === 0 ? 'اليوم' : 'بعد ' + left + ' ' + M.daysWord(left)) +
+      (hLeft !== null ? row('عيد ميلادك الهجري القادم', hLeft === 0 ? 'اليوم' : M.weekday(hNext) + ' ' + M.gText(hNext) + '، بعد ' + hLeft + ' ' + M.daysWord(hLeft)) : '') +
+      '</ul>';
+  }
+  cal.addEventListener('change', function () { fillMonths(); calc(); });
+  [d, m, y].forEach(function (el) { el.addEventListener('input', calc); el.addEventListener('change', calc); });
+  fillMonths();
+  calc();
+};
+</script>
+</body>
+</html>

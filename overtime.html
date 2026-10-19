@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>حاسبة العمل الإضافي حسب نظام العمل السعودي</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="احسب أجر ساعات العمل الإضافي حسب المادة 107 من نظام العمل السعودي: أجر الساعة مضافًا إليه 50% من الأجر الأساسي.">
+<link rel="canonical" href="https://egltsa26-eng.github.io/mawed/overtime">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ar_SA">
+<meta property="og:site_name" content="موعد">
+<meta property="og:title" content="حاسبة العمل الإضافي حسب نظام العمل السعودي">
+<meta property="og:description" content="احسب أجر ساعات العمل الإضافي حسب المادة 107 من نظام العمل السعودي: أجر الساعة مضافًا إليه 50% من الأجر الأساسي.">
+<meta property="og:url" content="https://egltsa26-eng.github.io/mawed/overtime">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="/mawed/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/mawed/assets/fonts/readex-pro-arabic-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/mawed/assets/fonts.css">
+<meta name="theme-color" content="#C8102E">
+<link rel="stylesheet" href="/mawed/assets/site.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "حاسبة أجر العمل الإضافي", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "inLanguage": "ar-SA", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "SAR"}}</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/mawed/" aria-label="موعد، الصفحة الرئيسية">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="3" y="5" width="26" height="24" rx="5" fill="var(--leaf)" stroke="var(--rule)"/><path d="M3 10a5 5 0 0 1 5-5h16a5 5 0 0 1 5 5v2H3z" fill="var(--red)"/><circle cx="11" cy="8.5" r="1.4" fill="var(--paper)"/><circle cx="21" cy="8.5" r="1.4" fill="var(--paper)"/><text x="16" y="25" text-anchor="middle" font-family="Readex Pro, Tahoma, sans-serif" font-weight="700" font-size="11" fill="var(--ink)">27</text></svg>
+      موعد
+    </a>
+    <nav class="nav" aria-label="أقسام الموقع">
+      <a href="/mawed/#dates">المواعيد</a>
+      <a href="/mawed/#tools" aria-current="page">الحاسبات</a>
+      <a href="/mawed/about">عن موعد</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <div class="wrap">
+
+<nav class="crumbs" aria-label="مسار الصفحة"><a href="/mawed/">الرئيسية</a><span aria-hidden="true">›</span><a href="/mawed/#tools">الحاسبات</a><span aria-hidden="true">›</span><span>حاسبة العمل الإضافي</span></nav>
+
+<div class="intro">
+  <h1>حاسبة أجر العمل الإضافي</h1>
+  <p class="lead">اكتب راتبك الأساسي والبدلات وعدد الساعات الإضافية، ونحسب أجرها حسب المادة 107 من نظام العمل.</p>
+</div>
+
+<div class="calc" data-calc="overtime">
+  <form class="form" novalidate onsubmit="return false">
+    <div class="row2"><div class="field"><label for="ot-basic">الراتب الأساسي الشهري</label><input id="ot-basic" type="text" inputmode="decimal" dir="ltr" value="6000"></div><div class="field"><label for="ot-allow">مجموع البدلات الثابتة</label><input id="ot-allow" type="text" inputmode="decimal" dir="ltr" value="1500"></div></div><div class="row2"><div class="field"><label for="ot-hours">ساعات العمل الإضافي</label><input id="ot-hours" type="text" inputmode="decimal" dir="ltr" value="10"></div><div class="field"><label for="ot-daily">ساعات الدوام اليومي</label><input id="ot-daily" type="text" inputmode="decimal" dir="ltr" value="8"><span class="hint">8 ساعات، أو 6 في رمضان للمسلمين</span></div></div>
+  </form>
+  <div class="result" aria-live="polite">
+    <div class="result-head">أجر العمل الإضافي</div>
+    <div class="result-body">
+      <p class="muted">جاري الحساب…</p>
+    </div>
+  </div>
+</div>
+
+
+
+<section class="prose">
+  <h2>طريقة الحساب</h2>
+  <p>تنص المادة 107 على أن يدفع صاحب العمل عن ساعة العمل الإضافية أجر الساعة مضافًا إليه 50% من أجر الساعة الأساسي. نحسب أجر الساعة بقسمة الأجر الشهري على 30 يومًا ثم على ساعات الدوام اليومي.</p>
+  <p>مثال: راتب أساسي 6,000 ريال وبدلات 1,500 ريال ودوام 8 ساعات. أجر الساعة الفعلي 7,500 ÷ 240 = 31.25 ريالًا، ونصف أجر الساعة الأساسي 6,000 ÷ 240 × 0.5 = 12.50 ريالًا. فساعة العمل الإضافي = 43.75 ريالًا.</p>
+  
+  <p class="source">المصادر: <a href="https://www.hrsd.gov.sa/%D8%B4%D8%B1%D9%88%D8%B7-%D8%A7%D9%84%D8%B9%D9%85%D9%84-%D9%88%D8%B8%D8%B1%D9%88%D9%81%D9%87" rel="noopener" target="_blank">نظام العمل: شروط العمل وظروفه، المواد 89 إلى 118</a></p>
+</section>
+
+
+
+<section>
+  <h2 class="section-title">أسئلة متكررة</h2>
+  <div class="faq">
+    <details><summary>هل العمل يوم الإجازة الأسبوعية يُحسب إضافيًا؟</summary><div>نعم، يعد العمل في أيام العطل والأعياد عملًا إضافيًا حسب نظام العمل.</div></details>
+    <details><summary>هل يجوز تعويضي بإجازة بدل أجر العمل الإضافي؟</summary><div>بعد تعديلات نظام العمل في 2025 يجوز، باتفاق العامل وصاحب العمل، أن يُعوض العامل عن ساعات العمل الإضافي بأيام إجازة مدفوعة الأجر بدل الأجر الإضافي.</div></details>
+    <details><summary>كيف يُحسب أجر الساعة؟</summary><div>النظام لا يحدد طريقة القسمة. الشائع قسمة الأجر الشهري على 30 يومًا ثم على ساعات الدوام اليومي، وهذا ما تستخدمه الحاسبة.</div></details>
+    
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">حاسبات ومواعيد أخرى</h2>
+  <div class="related"><a href="/mawed/end-of-service">حاسبة نهاية الخدمة</a><a href="/mawed/salary">موعد الراتب</a></div>
+</section>
+
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <p data-today>&nbsp;</p>
+    <nav class="foot-links" aria-label="روابط الموقع">
+      <a href="/mawed/about">عن موعد</a>
+      <a href="/mawed/contact">تواصل معنا</a>
+      <a href="/mawed/privacy">سياسة الخصوصية</a>
+      <a href="/mawed/terms">الشروط وإخلاء المسؤولية</a>
+    </nav>
+    <p>المعلومات هنا للاسترشاد، والمرجع النهائي هو الجهة الرسمية. آخر مراجعة للمواعيد: أكتوبر 2026.</p>
+  </div>
+</footer>
+<script>window.MAWED_UQ = {"firstMJD": 23998, "firstYear": 1343, "lens": "090090008000990909090909090919080090990090099009990090090099090909009918090909000810909099090090090909990090090909090909090090900990909090090909090909090090990909009909090909090900009099099009000909909909090909090900090909090909090909090909090909090900090909080009090909090900090909090909090909090909090909090900090909009009090909090909090990909000909090990900909090909090090909009900090909099009909900090909099090900900090909090909909090909090090909090909090090990909090090099090909009090909090909090909090099090009009909090900990909090900900909090909090909090900090909009099090909090900990909090900090999090900090909099009090090990909090009099090909009090909090909009090909090909009009099090900909090990909000909099090900090909909900900090990990090090909090909090090909090909090090909099090090090909909090009090990909009009099099009000909909900900900990990900090909099090090090909099090090900909099090900090909909090090090909909000090990999000090099099900090090909909090090090990909090090900909909090090090990909009009099099000900909909900900900990909090900909090990900090909099090090090909909090090099090909090090909090909090090099090990090009909909090009090990909000909099090900900909909090900909090909090900909009909090900090990990900090099099090009090909909009009090990909009009090990909009009099090909000909909090900099090909900090909090990090900909099090900090909909900900090990990090009099099009009090909900909009090909090909090090909909009009090990909000909099099000090909909090090090990909090090909090990090090099099009090009909909009009090909909009090090990909009009099090909000909909909000900990990900900099099090090090909909090090900990909090900900909909090090090990990090009099099009009009909900909000990909090900909090990900900909099090900090909909090090090990909090090900990909090090099090990090009909909090009090990909000909099090900900990909090900909090909090909009009909909000"};</script>
+<script src="/mawed/assets/site.js"></script>
+<script>window.MawedPage = function (M) {
+  var root = document.querySelector('[data-calc="overtime"]');
+  var form = root.querySelector('form');
+  var out = root.querySelector('.result-body');
+  var $ = function (id) { return form.querySelector('#' + id); };
+  function num(el) { var v = parseFloat(String(el.value).replace(/,/g, '')); return isFinite(v) && v > 0 ? v : 0; }
+  function row(k, v) { return '<li><span>' + k + '</span><b>' + v + '</b></li>'; }
+  function calc() {
+    var basic = num($('ot-basic')), allow = num($('ot-allow')), hours = num($('ot-hours')), daily = num($('ot-daily')) || 8;
+    if (!basic) { out.innerHTML = '<p class="muted">اكتب الراتب الأساسي الشهري.</p>'; return; }
+    if (!hours) { out.innerHTML = '<p class="muted">اكتب عدد ساعات العمل الإضافي.</p>'; return; }
+    var monthHours = 30 * daily;
+    var hourActual = (basic + allow) / monthHours;
+    var hourBasic = basic / monthHours;
+    var perHour = hourActual + hourBasic * 0.5;
+    out.innerHTML = '<div class="result-big">' + M.money(perHour * hours) + '<small>ريال</small></div>' +
+      '<ul class="breakdown">' +
+      row('أجر الساعة الفعلي', M.money(hourActual) + ' ريال') +
+      row('50% من أجر الساعة الأساسي', M.money(hourBasic * 0.5) + ' ريال') +
+      row('أجر الساعة الإضافية', M.money(perHour) + ' ريال') +
+      row('عدد الساعات', hours.toLocaleString('en-US')) +
+      '</ul>';
+  }
+  form.addEventListener('input', calc);
+  form.addEventListener('change', calc);
+  calc();
+};
+</script>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>تحويل التاريخ من هجري إلى ميلادي والعكس</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="حوّل أي تاريخ من الهجري إلى الميلادي أو العكس حسب تقويم أم القرى المعتمد في السعودية، مع اسم اليوم.">
+<link rel="canonical" href="https://egltsa26-eng.github.io/mawed/date-converter">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ar_SA">
+<meta property="og:site_name" content="موعد">
+<meta property="og:title" content="تحويل التاريخ من هجري إلى ميلادي والعكس">
+<meta property="og:description" content="حوّل أي تاريخ من الهجري إلى الميلادي أو العكس حسب تقويم أم القرى المعتمد في السعودية، مع اسم اليوم.">
+<meta property="og:url" content="https://egltsa26-eng.github.io/mawed/date-converter">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="/mawed/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/mawed/assets/fonts/readex-pro-arabic-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/mawed/assets/fonts.css">
+<meta name="theme-color" content="#C8102E">
+<link rel="stylesheet" href="/mawed/assets/site.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "تحويل التاريخ هجري ميلادي", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "inLanguage": "ar-SA", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "SAR"}}</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/mawed/" aria-label="موعد، الصفحة الرئيسية">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="3" y="5" width="26" height="24" rx="5" fill="var(--leaf)" stroke="var(--rule)"/><path d="M3 10a5 5 0 0 1 5-5h16a5 5 0 0 1 5 5v2H3z" fill="var(--red)"/><circle cx="11" cy="8.5" r="1.4" fill="var(--paper)"/><circle cx="21" cy="8.5" r="1.4" fill="var(--paper)"/><text x="16" y="25" text-anchor="middle" font-family="Readex Pro, Tahoma, sans-serif" font-weight="700" font-size="11" fill="var(--ink)">27</text></svg>
+      موعد
+    </a>
+    <nav class="nav" aria-label="أقسام الموقع">
+      <a href="/mawed/#dates">المواعيد</a>
+      <a href="/mawed/#tools" aria-current="page">الحاسبات</a>
+      <a href="/mawed/about">عن موعد</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <div class="wrap">
+
+<nav class="crumbs" aria-label="مسار الصفحة"><a href="/mawed/">الرئيسية</a><span aria-hidden="true">›</span><a href="/mawed/#tools">الحاسبات</a><span aria-hidden="true">›</span><span>تحويل التاريخ</span></nav>
+
+<div class="intro">
+  <h1>تحويل التاريخ هجري ميلادي</h1>
+  <p class="lead">اختر اتجاه التحويل واكتب التاريخ، وتطلع لك النتيجة مع اسم اليوم حسب تقويم أم القرى.</p>
+</div>
+
+<div class="calc" data-calc="convert">
+  <form class="form" novalidate onsubmit="return false">
+    <div class="field"><label for="cv-dir">اتجاه التحويل</label><select id="cv-dir"><option value="g2h">من ميلادي إلى هجري</option><option value="h2g">من هجري إلى ميلادي</option></select></div><div class="row2"><div class="field"><label for="cv-d">اليوم</label><input id="cv-d" type="number" inputmode="numeric" min="1" max="31" value="15"></div><div class="field"><label for="cv-m">الشهر</label><select id="cv-m"></select></div><div class="field"><label for="cv-y">السنة</label><input id="cv-y" type="number" inputmode="numeric" value="1995"><span class="hint" id="cv-y-hint">من 1925 إلى 2077 م</span></div></div>
+  </form>
+  <div class="result" aria-live="polite">
+    <div class="result-head">التاريخ المقابل</div>
+    <div class="result-body">
+      <p class="muted">جاري الحساب…</p>
+    </div>
+  </div>
+</div>
+
+
+
+<section class="prose">
+  <h2>عن تقويم أم القرى</h2>
+  <p>تقويم أم القرى هو التقويم الهجري الرسمي في المملكة، ويُحسب فلكيًا مسبقًا. تعتمد عليه الجهات الحكومية في المعاملات والعقود. أما بداية رمضان والأعياد فتُعلن بعد رؤية الهلال، فقد تختلف بيوم.</p>
+  <h2>أطوال الأشهر الهجرية</h2>
+  <p>الشهر الهجري 29 أو 30 يومًا، ولا يتكرر النمط نفسه كل سنة. إذا كتبت يوم 30 في شهر طوله 29 يومًا ننبهك.</p>
+  
+  <p class="source">المصادر: <a href="https://saudipedia.com/%D8%AA%D9%82%D9%88%D9%8A%D9%85-%D8%A3%D9%85-%D8%A7%D9%84%D9%82%D8%B1%D9%89" rel="noopener" target="_blank">سعوديبيديا: تقويم أم القرى</a></p>
+</section>
+
+
+
+<section>
+  <h2 class="section-title">أسئلة متكررة</h2>
+  <div class="faq">
+    <details><summary>ليش يختلف التحويل بين المواقع بيوم؟</summary><div>بعض المواقع تستخدم حسابًا تقريبيًا أو تقويمًا غير أم القرى. نحن نعتمد جدول أم القرى الرسمي.</div></details>
+    <details><summary>ما المدى المتاح؟</summary><div>من 1343 إلى 1500 هـ، أي من 1925 إلى 2077 م تقريبًا.</div></details>
+    
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">حاسبات ومواعيد أخرى</h2>
+  <div class="related"><a href="/mawed/age">حساب العمر</a><a href="/mawed/ramadan">كم باقي على رمضان</a><a href="/mawed/eid-al-adha">كم باقي على عيد الأضحى</a></div>
+</section>
+
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <p data-today>&nbsp;</p>
+    <nav class="foot-links" aria-label="روابط الموقع">
+      <a href="/mawed/about">عن موعد</a>
+      <a href="/mawed/contact">تواصل معنا</a>
+      <a href="/mawed/privacy">سياسة الخصوصية</a>
+      <a href="/mawed/terms">الشروط وإخلاء المسؤولية</a>
+    </nav>
+    <p>المعلومات هنا للاسترشاد، والمرجع النهائي هو الجهة الرسمية. آخر مراجعة للمواعيد: أكتوبر 2026.</p>
+  </div>
+</footer>
+<script>window.MAWED_UQ = {"firstMJD": 23998, "firstYear": 1343, "lens": "090090008000990909090909090919080090990090099009990090090099090909009918090909000810909099090090090909990090090909090909090090900990909090090909090909090090990909009909090909090900009099099009000909909909090909090900090909090909090909090909090909090900090909080009090909090900090909090909090909090909090909090900090909009009090909090909090990909000909090990900909090909090090909009900090909099009909900090909099090900900090909090909909090909090090909090909090090990909090090099090909009090909090909090909090099090009009909090900990909090900900909090909090909090900090909009099090909090900990909090900090999090900090909099009090090990909090009099090909009090909090909009090909090909009009099090900909090990909000909099090900090909909900900090990990090090909090909090090909090909090090909099090090090909909090009090990909009009099099009000909909900900900990990900090909099090090090909099090090900909099090900090909909090090090909909000090990999000090099099900090090909909090090090990909090090900909909090090090990909009009099099000900909909900900900990909090900909090990900090909099090090090909909090090099090909090090909090909090090099090990090009909909090009090990909000909099090900900909909090900909090909090900909009909090900090990990900090099099090009090909909009009090990909009009090990909009009099090909000909909090900099090909900090909090990090900909099090900090909909900900090990990090009099099009009090909900909009090909090909090090909909009009090990909000909099099000090909909090090090990909090090909090990090090099099009090009909909009009090909909009090090990909009009099090909000909909909000900990990900900099099090090090909909090090900990909090900900909909090090090990990090009099099009009009909900909000990909090900909090990900900909099090900090909909090090090990909090090900990909090090099090990090009909909090009090990909000909099090900900990909090900909090909090909009009909909000"};</script>
+<script src="/mawed/assets/site.js"></script>
+<script>window.MawedPage = function (M) {
+  var form = document.querySelector('[data-calc="convert"] form');
+  var out = document.querySelector('[data-calc="convert"] .result-body');
+  var dir = form.querySelector('#cv-dir');
+  var d = form.querySelector('#cv-d'), m = form.querySelector('#cv-m'), y = form.querySelector('#cv-y');
+  var yHint = form.querySelector('#cv-y-hint');
+
+  function fillMonths() {
+    var names = dir.value === 'h2g' ? M.HM : M.GM;
+    var keep = m.value;
+    m.innerHTML = '';
+    names.forEach(function (n, i) { var o = document.createElement('option'); o.value = i + 1; o.textContent = (i + 1) + ' - ' + n; m.appendChild(o); });
+    m.value = keep || '1';
+    yHint.textContent = dir.value === 'h2g' ? 'من 1343 إلى 1500 هـ' : 'من 1925 إلى 2077 م';
+  }
+  function row(k, v) { return '<li><span>' + k + '</span><b>' + v + '</b></li>'; }
+  function calc() {
+    var dd = parseInt(d.value, 10), mm = parseInt(m.value, 10), yy = parseInt(y.value, 10);
+    if (!dd || !mm || !yy) { out.innerHTML = '<p class="muted">اكتب اليوم والشهر والسنة.</p>'; return; }
+    var g, h;
+    if (dir.value === 'h2g') {
+      h = [yy, mm, dd];
+      g = M.fromHijri(yy, mm, dd);
+      if (!g) {
+        var len = M.hMonthLen(yy, mm);
+        out.innerHTML = '<p class="warn">' + (len ? 'شهر ' + M.HM[mm - 1] + ' ' + yy + ' في تقويم أم القرى ' + len + ' يومًا فقط.' : 'السنة خارج المدى المتاح (1343 إلى 1500 هـ).') + '</p>';
+        return;
+      }
+      out.innerHTML = '<div class="result-big" style="font-size:clamp(1.6rem,1.2rem + 2vw,2.2rem)">' + M.gText(g) + '<small>م</small></div>' +
+        '<ul class="breakdown">' + row('اليوم', M.weekday(g)) + row('التاريخ الهجري', M.hText(h)) +
+        row('بالأرقام', g[2] + '/' + g[1] + '/' + g[0]) + '</ul>';
+    } else {
+      var t = new Date(Date.UTC(yy, mm - 1, dd));
+      if (t.getUTCMonth() !== mm - 1 || t.getUTCDate() !== dd) { out.innerHTML = '<p class="warn">هذا اليوم غير موجود في ' + M.GM[mm - 1] + ' ' + yy + '.</p>'; return; }
+      g = [yy, mm, dd];
+      h = M.toHijri(yy, mm, dd);
+      if (!h) { out.innerHTML = '<p class="warn">السنة خارج المدى المتاح (1925 إلى 2077 م).</p>'; return; }
+      out.innerHTML = '<div class="result-big" style="font-size:clamp(1.6rem,1.2rem + 2vw,2.2rem)">' + M.hText(h) + '</div>' +
+        '<ul class="breakdown">' + row('اليوم', M.weekday(g)) + row('التاريخ الميلادي', M.gText(g)) +
+        row('بالأرقام', h[2] + '/' + h[1] + '/' + h[0] + 'هـ') + '</ul>';
+    }
+  }
+  dir.addEventListener('change', function () {
+    // carry the shown date over to the other calendar so switching feels natural
+    var dd = parseInt(d.value, 10), mm = parseInt(m.value, 10), yy = parseInt(y.value, 10);
+    var conv = null;
+    if (dd && mm && yy) conv = dir.value === 'h2g' ? M.toHijri(yy, mm, dd) : M.fromHijri(yy, mm, dd);
+    fillMonths();
+    if (conv) { y.value = conv[0]; m.value = conv[1]; d.value = conv[2]; }
+    calc();
+  });
+  [d, m, y].forEach(function (el) { el.addEventListener('input', calc); el.addEventListener('change', calc); });
+  var t = M.todayRiyadh();
+  fillMonths();
+  y.value = t[0]; m.value = t[1]; d.value = t[2];
+  calc();
+};
+</script>
+</body>
+</html>
