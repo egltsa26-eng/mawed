@@ -20,6 +20,8 @@ slugs = sys.argv[2:]
 
 class Handler(http.server.SimpleHTTPRequestHandler):
     def translate_path(self, path):
+        if path.startswith("/mawed"):
+            path = path[len("/mawed"):] or "/"
         p = super().translate_path(path)
         if not Path(p).suffix and Path(p + ".html").exists():
             return p + ".html"
@@ -42,7 +44,7 @@ with sync_playwright() as pw:
             pg.on("pageerror", lambda e: errors.append(str(e)))
             pg.on("console", lambda m: errors.append(m.text) if m.type == "error" else None)
             for s in slugs:
-                pg.goto(f"http://127.0.0.1:8765/{'' if s == 'index' else s}")
+                pg.goto(f"http://127.0.0.1:8765/mawed/{'' if s == 'index' else s}")
                 pg.wait_for_timeout(1400)
                 pg.screenshot(path=str(OUT / f"{s}-{w}-{scheme}.png"), full_page=(w == 390))
                 sw = pg.evaluate("document.documentElement.scrollWidth")

@@ -16,6 +16,8 @@ SITE = ROOT / "dist"
 
 class Handler(http.server.SimpleHTTPRequestHandler):
     def translate_path(self, path):
+        if path.startswith("/mawed"):
+            path = path[len("/mawed"):] or "/"
         p = super().translate_path(path)
         if not Path(p).suffix and Path(p + ".html").exists():
             return p + ".html"
@@ -61,7 +63,7 @@ with sync_playwright() as pw:
     errors = []
     pg.on("pageerror", lambda e: errors.append(str(e)))
     for page, fields, radios, want, label in CASES:
-        pg.goto(f"http://127.0.0.1:8766/{page}")
+        pg.goto(f"http://127.0.0.1:8766/mawed/{page}")
         for sel, v in fields.items():
             el = pg.locator(sel)
             if el.evaluate("e => e.tagName") == "SELECT":
@@ -76,7 +78,7 @@ with sync_playwright() as pw:
         fails += not ok
         print(("PASS" if ok else "FAIL"), label, "|", got.replace("\n", " "))
     # age: someone born 1 Jan 2000 is 26 on 19 Oct 2026 (the page uses today's Riyadh date)
-    pg.goto("http://127.0.0.1:8766/age")
+    pg.goto("http://127.0.0.1:8766/mawed/age")
     pg.locator("#age-cal").select_option("g")
     pg.locator("#age-y").fill("2000"); pg.locator("#age-m").select_option("1"); pg.locator("#age-d").fill("1")
     pg.locator("#age-d").dispatch_event("input")

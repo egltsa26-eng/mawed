@@ -68,7 +68,7 @@ def next_date(dates, today):
     return None
 
 
-def build_pages(today):
+def build_pages(today, site_root="https://egltsa26-eng.github.io/mawed"):
     ctx = {"today": today, "hijri": hijri, "from_hijri": from_hijri, "gtext": gtext, "htext": htext,
            "wday": wday, "info": info, "next_date": next_date, "days_word": days_word, "GM": GM, "HM": HM}
     countdowns = programs.build(ctx)       # list of countdown page dicts (with 'dates')
@@ -99,7 +99,7 @@ def build_pages(today):
             "data_json": json.dumps(home_data, ensure_ascii=False),
         },
         "jsonld": json.dumps({
-            "@context": "https://schema.org", "@type": "WebSite", "name": "موعد", "url": "https://mawedsa.com/",
+            "@context": "https://schema.org", "@type": "WebSite", "name": "موعد", "url": site_root + "/",
             "inLanguage": "ar-SA"}, ensure_ascii=False),
     }
     pages = [home] + [c["page"] for c in countdowns] + tools + [

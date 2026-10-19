@@ -20,7 +20,11 @@ SRC = ROOT / "src"
 sys.path.insert(0, str(SRC))
 import content  # noqa: E402
 
-ORIGIN = "https://mawedsa.com"
+# Where the site lives. Free GitHub Pages address for now; when a custom domain is bought,
+# set HOST to "https://<domain>" and BASE to "" (the build and all links follow).
+HOST = "https://egltsa26-eng.github.io"
+BASE = "/mawed"
+ORIGIN = HOST + BASE
 UQ_JSON = (SRC / "data" / "ummalqura.json").read_text()
 CSS = (SRC / "assets" / "site.css").read_text()
 JS = (SRC / "assets" / "site.js").read_text()
@@ -50,18 +54,20 @@ class Site:
         self.inline_js = not self.production
         self.css = CSS
         self.js = JS
-        self.origin = ORIGIN
+        self.origin = HOST
+        self.base = BASE if self.production else ""
+        self.root = ORIGIN
         self.uq_json = UQ_JSON
         self.reviewed = content.REVIEWED_TEXT
         self.adsense_client = content.ADSENSE_CLIENT
 
     def link(self, slug):
         if self.production:
-            return "/" if slug == "index" else "/" + slug
+            return BASE + ("/" if slug == "index" else "/" + slug)
         return ("home" if slug == "index" else slug) + ".html"
 
     def asset(self, name):
-        return "/assets/" + name if self.production else "assets/" + name
+        return BASE + "/assets/" + name if self.production else "assets/" + name
 
     def ad(self, where):
         if self.production:
@@ -87,7 +93,7 @@ def render_all(mode, out_dir):
     if out_dir.exists():
         shutil.rmtree(out_dir)
     out_dir.mkdir(parents=True)
-    pages = content.build_pages(riyadh_today())
+    pages = content.build_pages(riyadh_today(), ORIGIN)
     for pg in pages:
         tpl = env.get_template(pg["template"])
         page = {
