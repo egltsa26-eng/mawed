@@ -118,6 +118,7 @@
         .replace('{hijri}', hText(h))
         .replace('{left}', n.left === 0 ? 'اليوم' : 'باقي ' + n.left + ' ' + daysWord(n.left));
     });
+    if (data.title_tpl) document.title = data.title_tpl.replace('{label}', item.label || '');
     // table rows
     document.querySelectorAll('tr[data-date]').forEach(function (tr) {
       var a = parseISO(tr.getAttribute('data-date'));

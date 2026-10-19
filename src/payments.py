@@ -82,9 +82,10 @@ def pages(ctx, countdown, related_for):
     sm = ns["label"].replace("راتب ", "")
     out.append(countdown(
         ctx, slug="salary", short="الراتب", crumb="كم باقي على الراتب",
-        title=f"كم باقي على الراتب؟ موعد راتب {sm}",
+        title=f"كم باقي على الراتب؟ موعد {ns['label']}",
         description=f"موعد صرف رواتب موظفي الدولة لشهر {sm}: {wd(ns['date'])} {ctx['gtext'](ns['date'])} حسب وزارة المالية، مع عد تنازلي وجدول الرواتب للأشهر القادمة بالهجري والميلادي.",
         h1="كم باقي على الراتب؟",
+        title_tpl="كم باقي على الراتب؟ موعد {label}",
         answer_tpl="يُصرف {label} يوم {weekday} {date} الموافق {hijri}، {left}.",
         dates=sal,
         facts=[("القاعدة", "يوم 27 من كل شهر ميلادي"), ("إذا وافق الجمعة", "يُصرف الخميس الذي قبله"),
@@ -120,6 +121,8 @@ def pages(ctx, countdown, related_for):
         title=f"موعد حساب المواطن {nc['label']}: كم باقي على نزول الدعم؟",
         description=f"موعد إيداع حساب المواطن {nc['label']}: {wd(nc['date'])} {ctx['gtext'](nc['date'])}، مع عد تنازلي وجدول الدفعات القادمة بالهجري والميلادي.",
         h1=f"موعد حساب المواطن {nc['label']}",
+        h1_tpl="موعد حساب المواطن {label}",
+        title_tpl="موعد حساب المواطن {label}: كم باقي على نزول الدعم؟",
         answer_tpl="تُودع {label} من حساب المواطن يوم {weekday} {date} الموافق {hijri}، {left}.",
         dates=ca,
         facts=[("الموعد المعتاد", "يوم 10 من كل شهر ميلادي"), ("إذا وافق الجمعة", "أُودع في 2026 يوم الخميس الذي قبله"),

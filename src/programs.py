@@ -21,7 +21,7 @@ def related_for(slug, extra=None):
 
 def countdown(ctx, *, slug, short, title, description, h1, crumb, answer_tpl, dates, facts, sources,
               table_title, table_head=None, body=(), faq=(), note=None, table_note=None, kicker=None,
-              on_home=True, related=None, jsonld_extra=None):
+              on_home=True, related=None, jsonld_extra=None, h1_tpl=None, title_tpl=None):
     today = ctx["today"]
     past = [d for d in dates if d["date"] < today]
     upcoming = past[-1:] + [d for d in dates if d["date"] >= today][:12]
@@ -35,11 +35,13 @@ def countdown(ctx, *, slug, short, title, description, h1, crumb, answer_tpl, da
         rows.append({"iso": d["date"].isoformat(), "label": d.get("label", ""), "weekday": ctx["wday"](d["date"]),
                      "gtext": ctx["gtext"](d["date"]), "htext": ctx["htext"](d["date"]), "moved": d.get("moved"), "note": d.get("note")})
     data = {"dates": [{"date": d["date"].isoformat(), "label": d.get("label", "")} for d in dates], "kicker": kicker or "باقي"}
+    if title_tpl:
+        data["title_tpl"] = title_tpl
     faq = list(faq)
     page = {
         "slug": slug, "template": "countdown.html", "section": "dates", "title": title, "description": description,
         "p": {
-            "crumb": crumb, "h1": h1, "answer_tpl": answer_tpl, "answer_static": answer_static, "kicker": kicker or "باقي",
+            "crumb": crumb, "h1": h1, "h1_tpl": h1_tpl, "answer_tpl": answer_tpl, "answer_static": answer_static, "kicker": kicker or "باقي",
             "next": nxt, "facts": facts(nd) if callable(facts) else facts, "note": note, "sources": sources,
             "table_title": table_title, "table_head": table_head or ["الشهر", "التاريخ", "بالهجري", "ملاحظة"],
             "rows": rows, "has_notes": any(r["moved"] or r["note"] for r in rows), "table_note": table_note, "body": list(body), "faq": faq,
